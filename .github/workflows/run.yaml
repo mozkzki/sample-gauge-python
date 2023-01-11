@@ -40,8 +40,11 @@ jobs:
       - name: Verify Python
         run: |
           python --version
-          pip list
           poetry --version
+          pip list
+          poetry install
+          poetry shell
+          pip list
 
       - name: Setup & Verify Gauge
         run: |
@@ -52,7 +55,8 @@ jobs:
           gauge version
 
       - name: Run Test
-        run: gauge run specs
+        run: |
+          gauge run specs
 
       # このレポート保存処理はzipにかためてworkflow結果に貼るだけ
       # GitHub Pagesへの公開もやっているので不要ならコメントアウトしても良い

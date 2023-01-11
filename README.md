@@ -10,6 +10,8 @@ gaugeのサンプル(ステップ実装言語はPython)
 ### 実行方法
 
 ```sh
+poetry install
+poetry shell
 gauge run specs
 ```
 
