@@ -11,3 +11,4 @@ reports
 *.pyc
 
 .venv
+.DS_Store
