@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sample-gauge-python"
+version = "0.1.0"
+description = "gaugeのサンプル(ステップ記述言語はPython)"
+authors = ["mozozki <mozkzki@mazda.co.jp>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+getgauge = "^0.3.17"
+protobuf = "3.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
