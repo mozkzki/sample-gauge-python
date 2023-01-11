@@ -45,6 +45,8 @@ jobs:
 
       - name: Setup & Verify Gauge
         run: |
+          which curl
+          curl --version
           curl -SsL https://downloads.gauge.org/stable | sh
           gauge install python --version 0.3.17
           gauge version
