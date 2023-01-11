@@ -45,11 +45,10 @@ def assert_cd(dir_path, expected):
     result: CompletedProcess = subprocess.run(
         "cd {}".format(dir_path), shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
     )
-    print("----- result -----: {}".format(result.returncode))
     if expected == "成功":
         assert 0 == result.returncode
     else:
-        assert 1 == result.returncode
+        assert 0 != result.returncode
 
 
 @step("ディレクトリの中身をリストする")
