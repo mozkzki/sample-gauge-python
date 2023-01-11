@@ -55,6 +55,7 @@ jobs:
 
       - name: Run Test
         run: |
+          poetry shell
           gauge run specs
 
       # このレポート保存処理はzipにかためてworkflow結果に貼るだけ
