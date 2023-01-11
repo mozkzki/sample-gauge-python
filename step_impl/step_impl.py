@@ -34,14 +34,16 @@ def assert_words_vowel_count(table):
 
 @step("<dir_path> ディレクトリを作る")
 def assert_mkdir(dir_path):
-    result: CompletedProcess = subprocess.run(["mkdir", dir_path], stdout=subprocess.DEVNULL)
+    result: CompletedProcess = subprocess.run(
+        "mkdir {}".format(dir_path), shell=True, stdout=subprocess.DEVNULL
+    )
     assert 0 == result.returncode
 
 
 @step("<dir_path> ディレクトリへの移動は <expected> する")
 def assert_cd(dir_path, expected):
     result: CompletedProcess = subprocess.run(
-        ["cd", dir_path], shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        "cd {}".format(dir_path), shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
     )
     if expected == "成功":
         assert 0 == result.returncode
@@ -51,13 +53,15 @@ def assert_cd(dir_path, expected):
 
 @step("ディレクトリの中身をリストする")
 def assert_ls():
-    result: CompletedProcess = subprocess.run(["ls", "-l"], stdout=subprocess.DEVNULL)
+    result: CompletedProcess = subprocess.run("ls -l", shell=True, stdout=subprocess.DEVNULL)
     assert 0 == result.returncode
 
 
 @step("<dir_path> ディレクトリを削除する")
 def assert_rm(dir_path):
-    result: CompletedProcess = subprocess.run(["rm", "-rf", dir_path], stdout=subprocess.DEVNULL)
+    result: CompletedProcess = subprocess.run(
+        "rm -rf {}".format(dir_path), shell=True, stdout=subprocess.DEVNULL
+    )
     assert 0 == result.returncode
 
 
