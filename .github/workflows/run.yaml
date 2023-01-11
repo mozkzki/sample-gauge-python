@@ -34,6 +34,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Setup Poetry
+      - uses: Gr1N/setup-poetry@v8
+
       - name: Verify Python
         run: |
           python --version
