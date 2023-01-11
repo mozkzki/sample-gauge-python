@@ -1,33 +1,41 @@
-# Specification Heading
+# 仕様
 
-This is an executable specification file. This file follows markdown syntax.
-Every heading in this file denotes a scenario. Every bulleted point denotes a step.
+これは実行可能な仕様ファイルです。
+このファイルはマークダウン構文に従います。
+このファイルの各見出しは、シナリオを示しています。
+すべての箇条書きはステップを示します。
 
-To execute this specification, run
+この仕様ファイルの実行方法
 
     gauge run specs
 
+シナリオの外にもステップを書けます。
+この場所に書くステップは「Contexts Step」（xUnit系でのSetUpに該当）です。
 
-* Vowels in English language are "aeiou".
+* 英語の母音とは "aeiou" である
 
-## Vowel counts in single word
+## 母音の数（1つの単語）
+
+「##」で書くのがテストシナリオです。下記のようにタグを指定可能。実行や結果のフィルタに使える。
 
 tags: single word
 
-* The word "gauge" has "3" vowels.
+下記がステップ。テストシナリオの各実行ステップを順番に記載する。
 
+* "gauge" の母音の数は "3" であること
+* "test" の母音の数は "1" であること
 
-## Vowel counts in multiple word
+## 母音の数（複数の単語）
 
-This is the second scenario in this specification
+これは、この仕様の2つ目のシナリオです。
+テーブル駆動形式のシナリオです。
 
-Here's a step that takes a table
+* ほぼすべての単語に母音が含まれること
 
-* Almost all words have vowels
-     |Word  |Vowel Count|
-     |------|-----------|
-     |Gauge |3          |
-     |Mingle|2          |
-     |Snap  |1          |
-     |GoCD  |1          |
-     |Rhythm|0          |
+   |Word  |Vowel Count|
+   |------|-----------|
+   |Gauge |3          |
+   |Mingle|2          |
+   |Snap  |1          |
+   |GoCD  |1          |
+   |Rhythm|0          |
