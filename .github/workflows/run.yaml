@@ -37,13 +37,12 @@ jobs:
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v8
 
-      - name: Verify Python
+      - name: Install Python Libraries
         run: |
           python --version
           poetry --version
           pip list
           poetry install
-          poetry shell
           pip list
 
       - name: Setup & Verify Gauge

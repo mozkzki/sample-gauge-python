@@ -1,5 +1,3 @@
 {
-    "recommendations": [
-        "getgauge.gauge"
-    ]
+  "recommendations": ["getgauge.gauge", "ms-python.python"]
 }
