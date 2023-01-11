@@ -9,6 +9,8 @@ gaugeのサンプル(ステップ実装言語はPython)
 
 ### 実行方法
 
+入れてなければ[poetryをインストールする](https://python-poetry.org/docs/#installation)
+
 ```sh
 poetry install
 poetry shell
