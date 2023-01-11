@@ -10,6 +10,11 @@ python = "^3.10"
 getgauge = "^0.3.17"
 protobuf = "3.20.0"
 
+[tool.poetry.dev-dependencies]
+flake8 = "5.0.4"
+mypy = "0.991"
+black = "22.12.0"
+isort = "5.11.4"
 
 [build-system]
 requires = ["poetry-core"]
