@@ -40,9 +40,7 @@ def assert_mkdir(dir_path):
 
 @step("<dir_path> ディレクトリへの移動は <expected> する")
 def assert_cd(dir_path, expected):
-    result: CompletedProcess = subprocess.run(
-        ["cd", dir_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
-    )
+    result: CompletedProcess = subprocess.run(["cd", dir_path], stdout=subprocess.DEVNULL)
     if expected == "成功":
         assert 0 == result.returncode
     else:
