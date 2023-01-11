@@ -6,7 +6,7 @@ authors = ["mozozki <mozkzki@mazda.co.jp>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 getgauge = "^0.3.17"
 protobuf = "3.20.0"
 
