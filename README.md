@@ -33,7 +33,7 @@ GitHub Actionsでのテスト実施、テストレポート公開(GitHub Pages)�
 
 - `reports/html-report`フォルダをPagesに公開している
 - URLは下記になる
-  - <https://mozkzki.github.io/sample-gauge-java/specs/example.html>
+  - <https://mozkzki.github.io/sample-gauge-python/specs/example.html>
 - GitHub側でPagesを有効化（Source: GitHub Actions）する必要あり
 
 ### シナリオやステップの記載について
